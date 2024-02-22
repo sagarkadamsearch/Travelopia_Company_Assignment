@@ -4,6 +4,9 @@ body{
     font-family: Arial, sans-serif;
 }
 
+*{
+    box-sizing: border-box;
+}
 
 .navbar{
     height: 100px;
@@ -51,32 +54,39 @@ header::before {
     text-align: center;
 }
 .titleDiv h1{
-    font-size: clamp(20px,3vw,40px);
+    font-size: clamp(25px,3vw,40px);
     font-weight: bold;
 }
 .titleDiv:hover{
    color: burlywood;
 }
 
-.button-33 {
-  background-color: #c2fbd7;
-  border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-  color: green;
+#button-33{  
+  padding: 5px 10px;
+  font-size: clamp(13px,3vw,16px);
+  min-height: 30px;
+  max-width: 100px;
+  border: none;
+  background-color: #0095ff;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  color: #fff;
   cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 7px 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  font-size:  clamp(17px,15px,20px);
-  height: 20%;
+  font-weight: 400;
+}
+
+#button-33:hover{
+    background-color: #07c;
+}
+
+
+#button-33:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+#button-33:active {
+  background-color: #0064bd;
+  box-shadow: none;
 }
 
 .button-33:hover {
@@ -97,15 +107,12 @@ header::before {
     gap: 5%;
     align-items: center;
     justify-content: center;
-    font-size: 2vw;
+    font-size: clamp(16px,5vw,22px);
     display: none;
     background-color:lightgray;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
-#alertClose{
-}
-
 
 #alertClose {
   background-color: initial;
@@ -135,22 +142,19 @@ header::before {
   z-index: 9;
   border: 0;
   transition: box-shadow .2s;
-  font-size: 1.5vw;
+  font-size: 12px;
+  font-size: clamp(12px,3vw,16px);
 }
 
 #alertClose:hover {
   box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+  background-image: linear-gradient(-180deg, #f48e53, #ec5432);
+  color:greenyellow;
 }
 
 @media all and (max-width:767px) {
     .alertDiv{
-      height: 100px;
-      width: 150px;
-    }
-    .button-33{
-        height: 30px;
-        width: 90px;
-        font-size: 15px;
-        text-align: center;
+      height: 150px;
+      width: 200px;
     }
 }
